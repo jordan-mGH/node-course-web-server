@@ -42,6 +42,12 @@ app.get('/about', (req, res) => {
         pageTitle: 'About Page'
     });
 });
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects',
+        message: 'Portfolio page here.'
+    });
+});
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: 'This is bad bad not good.'
